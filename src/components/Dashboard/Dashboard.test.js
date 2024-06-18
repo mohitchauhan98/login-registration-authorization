@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import { toBeInTheDocument } from '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { MemoryRouter } from 'react-router-dom'; // Import MemoryRouter
-import userReducer from '../../store/Slice'; // Adjust the import path as necessary
-import Dashboard from './Dashboard'; // Adjust the import path as necessary
+import { MemoryRouter } from 'react-router-dom';
+import userReducer from '../../store/Slice';
+import Dashboard from './Dashboard';
 
 const renderWithProviders = (
   ui,
@@ -13,7 +13,7 @@ const renderWithProviders = (
 ) => {
   return render(
     <Provider store={store}>
-      <MemoryRouter>{ui}</MemoryRouter> {/* Wrap with MemoryRouter */}
+      <MemoryRouter>{ui}</MemoryRouter>
     </Provider>
   );
 };
